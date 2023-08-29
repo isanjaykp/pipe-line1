@@ -49,7 +49,7 @@ stage('build2') {
         }
     }
 
-    stage('deploy') {
+stage('deploy2') {
         when {
             branch 'master'
         }
@@ -59,5 +59,5 @@ stage('build2') {
                 """
         }
     }
-  }
-   }
+  
+}

@@ -6,7 +6,8 @@ agent any
 stages{
     stage('Build-Initiator-Info'){
             steps{
-                sh 'echo "Send Info"'
+                sh 'echo "Send Info $BRANCH_NAME"'
+                sh 'echo "Send Info ${env.BRANCH_NAME}"'
             }
     }
     stage('Build') {

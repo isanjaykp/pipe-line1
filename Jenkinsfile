@@ -67,7 +67,7 @@ stage("Stage with input") {
             echo 'userInput: ' + userInput
 
             if(userInput == true) {
-                // do action
+               echo "true"
             } else {
                 // not do action
                 echo "Action was aborted."

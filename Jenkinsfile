@@ -42,8 +42,8 @@ stage('build2') {
                 echo "Some build2 commands"
                 """
             script {
-              timeout(time: 10, unit: 'MINUTES') {
-                input(id: "Deploy_Gate", message: "Deploy ${params.project_name}?", ok: 'Deploy')
+              timeout(time: 1, unit: 'MINUTES') {
+                input(id: "Deploy_GateId", message: "Deploy ${params.project_name}?", ok: 'Deploy')
               }
             }
         }

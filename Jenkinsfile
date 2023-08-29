@@ -39,11 +39,11 @@ stages{
 stage('build2') {
         steps {
             sh  """
-                # Some commands
+                echo "Some build2 commands"
                 """
             script {
               timeout(time: 10, unit: 'MINUTES') {
-                input(id: "Deploy Gate", message: "Deploy ${params.project_name}?", ok: 'Deploy')
+                input(id: "Deploy_Gate", message: "Deploy ${params.project_name}?", ok: 'Deploy')
               }
             }
         }
@@ -55,7 +55,7 @@ stage('deploy2') {
         }
         steps {
             sh  """
-                # some commands
+                echo "some deploy2 commands"
                 """
         }
     }
